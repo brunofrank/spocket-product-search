@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SpocketProductSearch</title>
+    <title>Spocket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +12,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="<%= root_url %>">
+          <i class="fab fa-get-pocket"></i>
+          &nbsp; &nbsp; Spocket
+        </a>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </section>
   </body>
 </html>
