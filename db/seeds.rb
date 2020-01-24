@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+products = JSON.parse(File.open("#{Rails.root}/db/seeds/SpocketProducts.json").read)
+products.each do |product|
+  product['tags'] = product['tags'].split(/, ?/).map(&:strip)
+  Product.create(product)
+end
