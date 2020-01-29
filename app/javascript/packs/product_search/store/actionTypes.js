@@ -1,0 +1,5 @@
+export const SEARCH = 'SEARCH'
+export const SORT = 'SORT'
+export const START_LOADING = 'START_LOADING'
+export const FINNISH_LOADING = 'FINNISH_LOADING'
+export const PRODUCTS_LOADED = 'PRODUCTS_LOADED'

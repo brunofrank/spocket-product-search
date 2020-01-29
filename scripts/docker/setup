@@ -4,5 +4,5 @@ echo 'Connecting to the instance, please wait...'
 docker-compose up -d
 docker-compose down
 docker-compose run --rm railsapp bundle && yarn install
-docker-compose run --rm railsapp bundle exec rake db:create
-docker-compose up -d
+docker-compose run --rm railsapp bundle exec rake db:create && bundle exec rake db:seed
+docker-compose up

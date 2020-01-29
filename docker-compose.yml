@@ -85,7 +85,7 @@ services:
     cap_add:
       - IPC_LOCK
     volumes:
-      - elasticsearch-data:/usr/share/elasticsearch/data
+      - elasticsearch_data:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
       - 9300:9300
@@ -93,4 +93,4 @@ services:
 volumes:
   db_data:
   bundle_cache:
-  elasticsearch-data:
+  elasticsearch_data:
